@@ -1,6 +1,7 @@
 import './StatBar.css';
 
 export default function StatBar({ name, current, max, type }) {
+    const tauxRemplissage = Math.min(100, Math.max(0, (current / max) * 100));
 
     return (
         <div className={`stat-bar stat-bar--${type}`}>
@@ -10,7 +11,10 @@ export default function StatBar({ name, current, max, type }) {
             </div>
 
             <div className="stat-bar__track">
-                <div className="stat-bar__fill" style={{ width: '50%' }}></div>
+                <div
+                    className="stat-bar__fill"
+                    style={{ width: `${tauxRemplissage}%` }}
+                ></div>
             </div>
         </div>
     );
