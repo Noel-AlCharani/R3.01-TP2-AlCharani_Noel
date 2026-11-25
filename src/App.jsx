@@ -1,10 +1,11 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
+import './App.css';
+import StatBar from './components/StatBar.jsx';
 
-function App() {
-  return <h1>Bonjour à tous !</h1>;
+export default function App() {
+  return (
+      <div>
+        <h1 className="proposal-label">R3.01-REACT-TP2 / Écosystème et Paradigme</h1>
+        <StatBar name="Points de vie" current={156} max={300} type="hp" />
+      </div>
+  );
 }
-
-export default App
